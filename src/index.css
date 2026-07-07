@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: initial; /* Lenis handles smooth scrolling, initial is required for proper syncing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #000000; /* Pure black for seamless lunar alignment */
+    color: #F2F4F0; /* Soft cloud white */
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* Custom selection */
+  ::selection {
+    background: rgba(107, 143, 113, 0.3); /* Sage select */
+    color: #F2F4F0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1C221E;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6B8F71;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #6B8F71, #9FB3A6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(107, 143, 113, 0.3), rgba(159, 179, 166, 0.3));
+    z-index: -1;
+  }
+
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(107, 143, 113, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, #6B8F71, #9FB3A6);
+    background-size: 200% 200%;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    background-position: right center;
+    box-shadow: 0 0 30px rgba(107, 143, 113, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-padding {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+/* Lenis smooth scrolling class support */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Dappled canopy sunlight effect */
+.dappled-sunlight {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107, 143, 113, 0.26) 0%, rgba(107, 143, 113, 0.12) 40%, rgba(107, 143, 113, 0.03) 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Hide default cursor only when the custom cursor is active (configured in JS) */
+body.custom-cursor-active {
+  cursor: none;
+}
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active select,
+body.custom-cursor-active textarea,
+body.custom-cursor-active input {
+  cursor: none;
+}
+
+/* Custom Cursor styling */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #6B8F71;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  will-change: transform;
+}
+
+.cursor-dot.hovered {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(107, 143, 113, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  mix-blend-mode: normal;
+}
+
