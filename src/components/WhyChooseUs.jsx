@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
             Our Difference
           </span>
           <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
-            Why Choose <span className="font-serif italic font-normal text-accent-secondary">CloudScanopy</span>
+            Why Choose <span className="font-serif italic font-normal text-accent-secondary">CloudsCanopy</span>
           </h2>
         </motion.div>
 
@@ -88,9 +88,8 @@ export default function WhyChooseUs() {
               <motion.div
                 key={reason.title}
                 variants={itemVariants}
-                className={`flex gap-5 p-7 rounded-2xl bg-surface border border-white/8 group hover:border-accent/20 hover:bg-accent/[0.03] transition-all duration-300 ${
-                  isLast ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
-                }`}
+                className={`flex gap-5 p-7 rounded-2xl bg-surface border border-white/8 group hover:border-accent/20 hover:bg-accent/[0.03] transition-all duration-300 ${isLast ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+                  }`}
               >
                 <div
                   className={`flex-shrink-0 w-11 h-11 rounded-xl ${reason.bgColor} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}

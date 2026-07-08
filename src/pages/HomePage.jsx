@@ -8,7 +8,7 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import Process from '../components/Process'
 import Technologies from '../components/Technologies'
 import Industries from '../components/Industries'
-import FeaturedWork from '../components/FeaturedWork'
+import FerrariShowcase from '../components/FerrariShowcase'
 import Testimonial from '../components/Testimonial'
 import FAQ from '../components/FAQ'
 import FinalCTA from '../components/FinalCTA'
@@ -29,7 +29,7 @@ export default function HomePage() {
         <Process />
         <Technologies />
         <Industries />
-        <FeaturedWork />
+        <FerrariShowcase />
         <Testimonial />
         <FAQ />
         <FinalCTA />

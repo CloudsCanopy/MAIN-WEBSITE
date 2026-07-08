@@ -23,11 +23,10 @@ export default function IntroAnimation({ onComplete }) {
       setTimeout(() => setStage("logo"), 3600),
       setTimeout(() => setStage("ready"), 6000),
       setTimeout(() => setStage("letsgo"), 7400),
-      setTimeout(() => setStage("quote"), 8600),
       setTimeout(() => {
         setStage("done");
         onComplete?.();
-      }, 13100),
+      }, 9600),
     ];
 
     return () => timers.forEach((t) => clearTimeout(t));
@@ -208,50 +207,34 @@ export default function IntroAnimation({ onComplete }) {
 
             {/* Stage 5: LET'S GO! */}
             {stage === "letsgo" && (
-              <motion.div
-                key="letsgo-stage"
-                initial={{ opacity: 0, scale: 0.6, filter: "blur(20px)" }}
-                animate={{ opacity: 1, scale: 1.05, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.3, filter: "blur(12px)" }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center justify-center relative z-10"
-              >
-                <div className="absolute inset-0 bg-accent/35 blur-3xl rounded-full animate-ping pointer-events-none" />
-                <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"Sora", sans-serif' }}>
-                  LET'S GO!
-                </h1>
-              </motion.div>
-            )}
-
-            {/* Stage 6: QUESTION */}
-            {stage === "quote" && (
-              <motion.div
-                key="quote-stage"
-                initial={{ opacity: 0, scale: 0.94, filter: "blur(12px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.06, filter: "blur(10px)" }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center justify-center text-center max-w-4xl px-6 relative z-10"
-              >
-                {/* Glowing Spotlight Behind Question */}
-                <div className="absolute inset-0 bg-accent/10 blur-[100px] rounded-full pointer-events-none -z-10 animate-pulse" />
-
-                <p className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-snug tracking-tight mb-10 drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"Sora", "Inter", sans-serif' }}>
-                  “If your vision had <span className="shimmer-text">no limits</span>...<br className="hidden sm:block" />
-                  what would we <span className="shimmer-text">build together today</span>?”
-                </p>
-
-                <motion.div 
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                  className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#0c100d] border border-accent/40 text-accent text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold shadow-[0_0_30px_rgba(107,143,113,0.25)]"
+              <div key="letsgo-container" className="relative w-full h-full flex items-center justify-center">
+                {/* White Flash Effect Layer */}
+                <motion.div
+                  key="flash-effect"
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="fixed inset-0 bg-white z-[99] pointer-events-none"
+                />
+                
+                {/* Text animation appearing extremely fast (like a flash of text) */}
+                <motion.div
+                  key="letsgo-stage"
+                  initial={{ opacity: 0, scale: 0.4, filter: "blur(20px)" }}
+                  animate={{ opacity: 1, scale: 1.05, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, scale: 1.4, filter: "blur(12px)" }}
+                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex items-center justify-center relative z-10"
                 >
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_10px_#6B8F71]" />
-                  Engineering Digital Excellence
+                  <div className="absolute inset-0 bg-accent/35 blur-3xl rounded-full animate-ping pointer-events-none" />
+                  <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"Sora", sans-serif' }}>
+                    LET'S GO!
+                  </h1>
                 </motion.div>
-              </motion.div>
+              </div>
             )}
+
+
           </AnimatePresence>
         </div>
       </motion.div>

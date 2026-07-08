@@ -48,6 +48,10 @@ function App() {
       lenis.stop()
     } else {
       lenis.start()
+      // Recalculate ScrollTrigger offsets once layout settles after intro unmounts
+      setTimeout(() => {
+        ScrollTrigger.refresh()
+      }, 150)
     }
 
     // Clean up

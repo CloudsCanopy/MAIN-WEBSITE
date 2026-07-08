@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Send, CheckCircle, Mail, Phone, Instagram, Linkedin, Github } from 'lucide-react'
+import { Send, CheckCircle, Mail, Phone, MessageCircle, Instagram, Linkedin, Github } from 'lucide-react'
 import siteConfig from '../config/siteConfig'
 
 const inputClass =
@@ -43,7 +43,8 @@ export default function Contact() {
 
   const socialLinks = [
     { icon: Mail, label: 'Email', href: `mailto:${siteConfig.contact.email}`, value: siteConfig.contact.email },
-    { icon: Phone, label: 'Phone', href: `tel:${siteConfig.contact.phone}`, value: siteConfig.contact.phone },
+    { icon: Phone, label: 'Phone', href: `tel:${siteConfig.contact.phone}`, value: `+91 ${siteConfig.contact.phone}` },
+    { icon: MessageCircle, label: 'WhatsApp', href: `https://wa.me/91${siteConfig.contact.whatsapp}`, value: `+91 ${siteConfig.contact.whatsapp}` },
     { icon: Instagram, label: 'Instagram', href: siteConfig.social.instagram, value: 'Instagram' },
     { icon: Linkedin, label: 'LinkedIn', href: siteConfig.social.linkedin, value: 'LinkedIn' },
     { icon: Github, label: 'GitHub', href: siteConfig.social.github, value: 'GitHub' },
@@ -112,7 +113,7 @@ export default function Contact() {
                       name="name"
                       type="text"
                       autoComplete="name"
-                      placeholder="Jane Smith"
+                      placeholder=""
                       value={form.name}
                       onChange={handleChange}
                       className={inputClass}
@@ -132,7 +133,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      placeholder="jane@company.com"
+                      placeholder=""
                       value={form.email}
                       onChange={handleChange}
                       className={inputClass}

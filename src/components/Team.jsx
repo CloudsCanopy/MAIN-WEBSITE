@@ -8,28 +8,28 @@ const techTeam = [
     role: 'Founder & Chief Executive Officer',
     photo: '/team/aditya.jpg',
     initials: 'AS',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { linkedin: 'https://www.linkedin.com/in/aditya-kumar-sahoo03/', instagram: 'https://www.instagram.com/adi.tya_.03/', github: 'https://github.com/aditya030706' },
   },
   {
     name: 'ARYAN CHOUHAN',
     role: 'Core Leadership & Strategy',
     photo: '/team/aryan.jpg',
     initials: 'AC',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { linkedin: 'https://www.linkedin.com/in/aryan-chouhan-b67799324/', instagram: 'https://www.instagram.com/aryanchouhan001/', github: 'https://github.com/aryanchouhan22' },
   },
   {
     name: 'BHARGODEB PANIGRAHI',
     role: 'Core Engineering & Systems',
     photo: '/team/bhargodeb.jpg',
     initials: 'BP',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { linkedin: 'https://www.linkedin.com/in/bhargodeb-panigrahi-6b36a2323/', instagram: 'https://www.instagram.com/mr______panigrahi/', github: 'https://github.com/panigrahibhargodeb65-cloud' },
   },
   {
     name: 'SEETANSU SATYA PRAJNA',
     role: 'Core Architecture & AI',
     photo: '/team/seetansu.jpg',
     initials: 'SP',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { linkedin: 'https://www.linkedin.com/in/seetansusatya/', instagram: 'https://www.instagram.com/nexus5654/', github: 'https://github.com/Nexus5308' },
   },
 ]
 
@@ -39,14 +39,14 @@ const nonTechTeam = [
     role: 'Core Design & Product Studio',
     photo: '/team/lalit.jpg',
     initials: 'LM',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { linkedin: 'https://www.linkedin.com/in/lalit-mishra-4b239441a/', instagram: 'https://www.instagram.com/_lalit.mishra_/' },
   },
   {
     name: 'S ARYAN',
     role: 'Core Innovation & Operations',
     photo: '/team/s-aryan.jpg',
     initials: 'SA',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    social: { instagram: 'https://www.instagram.com/mostly.aryaan/' },
   },
 ]
 
