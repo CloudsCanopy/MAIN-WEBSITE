@@ -105,14 +105,14 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <div className="mb-6">
+          <div className="mb-8">
             <Link
               to="/team"
               onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/8 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-accent hover:text-text-primary hover:bg-accent/15 hover:border-accent/40 shadow-glow-green/5 transition-all duration-300 cursor-pointer"
+              className="group inline-flex items-center gap-2.5 px-6 py-3 text-[11px] font-bold font-mono uppercase tracking-[0.25em] text-white rounded-full btn-gradient shadow-glow-green hover:shadow-[0_0_30px_rgba(107,143,113,0.5)] transition-all duration-300 hover:scale-[1.03] cursor-pointer"
             >
               <span>WANNA MEET THE TEAM?</span>
-              <ArrowRight size={14} className="animate-pulse" />
+              <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200 text-white" />
             </Link>
           </div>
           <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
