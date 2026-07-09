@@ -146,15 +146,6 @@ export default function Hero() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </MagneticButton>
-            
-            <a
-              href="#work"
-              onClick={(e) => { e.preventDefault(); handleScroll('#work') }}
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 text-base font-semibold text-white rounded-2xl bg-white/5 border border-white/15 hover:border-accent/50 hover:bg-white/10 transition-all duration-300 focus:outline-none shadow-lg backdrop-blur-md"
-              id="hero-cta-secondary"
-            >
-              View Our Work
-            </a>
           </motion.div>
 
           {/* Floating stats block -> Executive Glassmorphism Cards */}
