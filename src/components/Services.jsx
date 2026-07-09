@@ -92,20 +92,22 @@ export default function Services() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column — Section Header */}
-          <div className="lg:col-span-4 lg:sticky lg:top-28 lg:h-fit">
-            <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
+          <div className="lg:col-span-4 lg:sticky lg:top-28 lg:h-fit px-6 py-8 rounded-3xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
+            {/* Ambient Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <span className="relative z-10 inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
               What We Do
             </span>
-            <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-6 moon-text-blend">
-              Solutions We <span className="font-serif italic font-normal text-accent-secondary">Build</span>
+            <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-6">
+              Solutions We <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Build</span>
             </h2>
             <p 
-              className="text-white text-base leading-relaxed font-semibold mb-8 max-w-sm drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
+              className="relative z-10 text-white text-base leading-relaxed font-semibold mb-8 max-w-sm drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
               style={{ color: '#FFFFFF' }}
             >
               From initial concept to deployment — every digital solution is engineered for longevity, security, and real business impact.
             </p>
-            <div className="hidden lg:block w-full h-px bg-white/10" />
+            <div className="relative z-10 hidden lg:block w-full h-px bg-white/10" />
           </div>
 
           {/* Right Column — Asymmetric List-Table */}

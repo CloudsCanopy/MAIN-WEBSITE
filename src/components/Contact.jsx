@@ -64,21 +64,19 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-2xl mx-auto px-6 py-8 rounded-3xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40"
         >
-          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
+          {/* Ambient Glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <span className="relative z-10 inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
             Start the Conversation
           </span>
-          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
-            Get in <span className="font-serif italic font-normal text-accent-secondary">Touch</span>
+          <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-4">
+            Get in <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Touch</span>
           </h2>
-          <div className="max-w-xl mx-auto px-6 py-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
-            {/* Soft accent gradient glow inside box on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <p className="text-text-secondary text-base sm:text-lg leading-relaxed relative z-10">
-              Tell us about your project and we&rsquo;ll get back to you within one business day.
-            </p>
-          </div>
+          <p className="relative z-10 text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+            Tell us about your project and we&rsquo;ll get back to you within one business day.
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
