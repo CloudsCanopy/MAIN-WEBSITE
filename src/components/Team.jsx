@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Linkedin, Instagram, Github, ArrowUpRight } from 'lucide-react'
+import { Linkedin, Instagram, Github, Mail, ArrowUpRight } from 'lucide-react'
 
 const techTeam = [
   {
@@ -8,6 +8,7 @@ const techTeam = [
     role: '',
     photo: '/team/aditya.jpg',
     initials: 'AS',
+    email: 'adityasa0307@gmail.com',
     social: { linkedin: 'https://www.linkedin.com/in/aditya-kumar-sahoo03/', instagram: 'https://www.instagram.com/adi.tya_.03/', github: 'https://github.com/aditya030706' },
   },
   {
@@ -15,6 +16,7 @@ const techTeam = [
     role: '',
     photo: '/team/aryan.jpg',
     initials: 'AC',
+    email: 'aryanchouhan22@gmail.com',
     social: { linkedin: 'https://www.linkedin.com/in/aryan-chouhan-b67799324/', instagram: 'https://www.instagram.com/aryanchouhan001/', github: 'https://github.com/aryanchouhan22' },
   },
   {
@@ -22,6 +24,7 @@ const techTeam = [
     role: '',
     photo: '/team/bhargodeb.jpg',
     initials: 'BP',
+    email: 'pbhargodeb@gmail.com',
     social: { linkedin: 'https://www.linkedin.com/in/bhargodeb-panigrahi-6b36a2323/', instagram: 'https://www.instagram.com/mr______panigrahi/', github: 'https://github.com/panigrahibhargodeb65-cloud' },
   },
   {
@@ -29,6 +32,7 @@ const techTeam = [
     role: '',
     photo: '/team/seetansu.jpg',
     initials: 'SP',
+    email: 'satyaprajnaseetansu@gmail.com',
     social: { linkedin: 'https://www.linkedin.com/in/seetansusatya/', instagram: 'https://www.instagram.com/nexus5654/', github: 'https://github.com/Nexus5308' },
   },
 ]
@@ -39,6 +43,7 @@ const nonTechTeam = [
     role: '',
     photo: '/team/rahul.jpg',
     initials: 'RP',
+    email: 'rahulpani.demo@gmail.com',
     social: { instagram: 'https://www.instagram.com/' },
   },
   {
@@ -46,6 +51,7 @@ const nonTechTeam = [
     role: '',
     photo: '/team/lalit.jpg',
     initials: 'LM',
+    email: 'lalitmishra.demo@gmail.com',
     social: { instagram: 'https://www.instagram.com/_lalit.mishra_/' },
   },
   {
@@ -53,6 +59,7 @@ const nonTechTeam = [
     role: '',
     photo: '/team/s-aryan.jpg',
     initials: 'SA',
+    email: 'saryan.demo@gmail.com',
     social: { instagram: 'https://www.instagram.com/mostly.aryaan/' },
   },
 ]
@@ -151,7 +158,16 @@ export default function Team() {
                 CloudsCanopy STUDIO
               </span>
             </div>
-            <div className="flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
+             <div className="flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
+              {member.email && (
+                <a
+                  href={`mailto:${member.email}`}
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
+                  aria-label={`Email ${member.name}`}
+                >
+                  <Mail size={18} />
+                </a>
+              )}
               {member.social.linkedin && (
                 <a
                   href={member.social.linkedin}
