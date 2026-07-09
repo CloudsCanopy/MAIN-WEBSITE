@@ -23,9 +23,9 @@ export default function Trust() {
           variants={fadeUp}
           className="text-center mb-14"
         >
-          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-8">
+          <h2 className="font-heading font-medium text-section text-white tracking-tight mb-8">
             Trusted Technology{' '}
-            <span className="font-serif italic font-normal text-accent-secondary">Partner</span>{' '}
+            <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Partner</span>{' '}
             for Modern Businesses
           </h2>
           <div className="max-w-2xl mx-auto px-6 py-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
