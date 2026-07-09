@@ -40,9 +40,12 @@ export default function Trust() {
 
         {/* Cohesive Translucent Container for Client Logos */}
         <div className="max-w-4xl mx-auto mt-12 p-8 sm:p-10 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative overflow-hidden text-center">
-          <h3 className="text-text-muted text-xs font-mono uppercase tracking-[0.25em] mb-8">
-            [ Client Partners — Coming Soon ]
-          </h3>
+          <div className="flex items-center justify-center gap-2.5 mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#6B8F71]" />
+            <h3 className="text-text-primary text-xs font-mono font-bold uppercase tracking-[0.25em]">
+              [ Client Partners — Coming Soon ]
+            </h3>
+          </div>
 
           <motion.div
             initial="hidden"
