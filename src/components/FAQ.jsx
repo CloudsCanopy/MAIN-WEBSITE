@@ -105,13 +105,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
-            Got Questions?
-          </span>
-          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
-            Frequently Asked <span className="font-serif italic font-normal text-accent-secondary">Questions</span>
-          </h2>
-          <div className="mt-6">
+          <div className="mb-6">
             <Link
               to="/team"
               onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
@@ -121,6 +115,12 @@ export default function FAQ() {
               <ArrowRight size={14} className="animate-pulse" />
             </Link>
           </div>
+          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
+            Got Questions?
+          </span>
+          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
+            Frequently Asked <span className="font-serif italic font-normal text-accent-secondary">Questions</span>
+          </h2>
         </motion.div>
 
         <div className="flex flex-col gap-3">
