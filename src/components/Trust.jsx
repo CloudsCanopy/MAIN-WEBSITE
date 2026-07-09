@@ -21,21 +21,19 @@ export default function Trust() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={fadeUp}
-          className="text-center mb-14"
+          className="text-center mb-14 max-w-3xl mx-auto px-6 py-8 rounded-3xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40"
         >
-          <h2 className="font-heading font-medium text-section text-white tracking-tight mb-8">
+          {/* Ambient Hover Glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-6">
             Trusted Technology{' '}
             <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Partner</span>{' '}
             for Modern Businesses
           </h2>
-          <div className="max-w-2xl mx-auto px-6 py-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
-            {/* Soft accent gradient glow inside box on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <p className="text-text-secondary text-base sm:text-lg leading-relaxed relative z-10">
-              We collaborate with startups, growing businesses, and organizations to transform
-              ideas into secure, scalable, and user-focused digital products.
-            </p>
-          </div>
+          <p className="relative z-10 text-text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            We collaborate with startups, growing businesses, and organizations to transform
+            ideas into secure, scalable, and user-focused digital products.
+          </p>
         </motion.div>
 
         {/* Cohesive Translucent Container for Client Logos */}
