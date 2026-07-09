@@ -30,17 +30,16 @@ export default function Testimonial() {
 
           <blockquote className="relative z-10">
             <p
-              className="font-heading font-medium text-text-primary leading-snug text-balance"
-              style={{ fontSize: 'clamp(1.4rem, 3vw, 2.25rem)', letterSpacing: '-0.02em' }}
+              className="font-heading font-medium text-white leading-snug text-balance"
+              style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)', letterSpacing: '-0.02em' }}
             >
-              &ldquo;Great partnerships begin with great conversations. We&rsquo;re building
-              success stories with businesses ready to embrace digital transformation.&rdquo;
+              &ldquo;Every custom software system we build is designed to eliminate operational friction and create a sustainable technical asset that handles transaction scale. We measure success by the performance and predictability of the code we ship.&rdquo;
             </p>
           </blockquote>
 
           <div className="mt-8 flex items-center justify-center gap-3 relative z-10">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent/50" />
-            <span className="text-text-secondary text-sm font-medium">CloudScanopy Studio</span>
+            <span className="text-text-secondary text-sm font-medium">Engineering Core, CloudScanopy</span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent/50" />
           </div>
         </motion.div>

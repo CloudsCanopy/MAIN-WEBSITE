@@ -71,11 +71,11 @@ export default function Contact() {
           <span className="relative z-10 inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
             Start the Conversation
           </span>
-          <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-4">
-            Get in <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Touch</span>
+          <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-4 text-center">
+            Start Your Engineering <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Consultation</span>
           </h2>
           <p className="relative z-10 text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Tell us about your project and we&rsquo;ll get back to you within one business day.
+            Tell us about your technical challenges and we'll reply with an engineering analysis within one business day.
           </p>
         </motion.div>
 

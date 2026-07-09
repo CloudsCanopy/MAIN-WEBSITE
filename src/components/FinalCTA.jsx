@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, MessageSquare } from 'lucide-react'
 import MagneticButton from './MagneticButton'
+import Moon from './Moon'
 
 export default function FinalCTA() {
   const handleScroll = (href) => {
@@ -11,14 +12,16 @@ export default function FinalCTA() {
   return (
     <section
       id="cta"
-      className="section-padding relative overflow-hidden"
+      className="section-padding relative overflow-hidden bg-black"
       aria-label="Contact call to action"
     >
-
       {/* Grid */}
       <div className="absolute inset-0 bg-grid opacity-25 pointer-events-none" aria-hidden="true" />
+      
+      {/* Signature Moon Graphic Localized */}
+      <Moon isAbsolute={true} />
 
-      <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,13 +40,12 @@ export default function FinalCTA() {
             className="relative z-10 font-heading font-bold text-white tracking-tight leading-tight mb-6 text-balance"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}
           >
-            Let&rsquo;s Build Something{' '}
-            <span className="gradient-text brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Exceptional Together.</span>
+            Let&rsquo;s Solve Your Next{' '}
+            <span className="gradient-text brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Business Challenge.</span>
           </h2>
           
           <p className="relative z-10 text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Whether you&rsquo;re launching a startup, modernizing your business, or creating the
-            next digital product, CloudScanopy is ready to help turn your vision into reality.
+            We design and build secure, fast, and scalable software to automate manual operations and support your company's growth.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10">
@@ -51,21 +53,21 @@ export default function FinalCTA() {
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleScroll('#contact') }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white rounded-2xl btn-gradient shadow-glow-green focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white rounded-2xl btn-gradient shadow-glow-green focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-base cursor-pointer"
                 id="cta-book-consultation"
               >
-                Book a Free Consultation
+                Book a Discovery Call
                 <ArrowRight size={18} />
               </a>
             </MagneticButton>
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); handleScroll('#contact') }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-text-primary rounded-2xl border border-white/15 hover:border-white/25 hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-base"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-text-primary rounded-2xl border border-white/15 hover:border-white/25 hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-base cursor-pointer"
               id="cta-get-in-touch"
             >
               <MessageSquare size={18} className="opacity-70" />
-              Get in Touch
+              Start Your Project
             </a>
           </div>
         </motion.div>

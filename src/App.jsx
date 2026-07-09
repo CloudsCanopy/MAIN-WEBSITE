@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage'
 import TeamPage from './pages/TeamPage'
 import IntroAnimation from './components/IntroAnimation'
 import CustomCursor from './components/CustomCursor'
-import Moon from './components/Moon'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -74,7 +73,6 @@ function App() {
     <BrowserRouter>
       {!introSeen && <IntroAnimation onComplete={handleIntroComplete} />}
       <CustomCursor />
-      <Moon />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/team" element={<TeamPage />} />

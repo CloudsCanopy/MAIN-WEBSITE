@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Terminal, Sparkles, Compass } from 'lucide-react'
 import gsap from 'gsap'
+import Moon from './Moon'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MagneticButton from './MagneticButton'
 import heroVideo from './cloudscanopyhomepage.mp4'
@@ -87,6 +88,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-grid opacity-20" />
       </div>
 
+      <Moon isAbsolute={true} />
+
       <div ref={contentRef} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-20 md:pt-44 md:pb-28 w-full">
         <div className="max-w-xl lg:max-w-2xl relative z-10">
           {/* Executive Pill Badge */}
@@ -98,7 +101,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#6B8F71]" />
             <span className="text-xs font-mono font-semibold uppercase tracking-[0.25em] text-accent">
-              Next-Gen Digital Product Studio
+              Enterprise Software Engineering
             </span>
           </motion.div>
 
@@ -107,13 +110,12 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-heading font-bold text-white leading-[1.15] tracking-tight mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
+            className="font-heading font-bold text-white leading-[1.15] tracking-tight mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
             style={{ color: '#FFFFFF' }}
           >
-            Engineering{' '}
-            <span className="font-serif italic font-normal text-accent-secondary">Digital Solutions</span>{' '}
-            That Move Businesses{' '}
-            <span className="font-serif italic font-normal text-accent">Forward.</span>
+            Software That Helps{' '}
+            <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Ambitious Businesses</span>{' '}
+            Operate Smarter.
           </motion.h1>
 
           {/* Subheading */}
@@ -121,11 +123,9 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-white text-sm md:text-base leading-relaxed mb-10 max-w-5xl font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
-            style={{ color: '#FFFFFF' }}
+            className="text-white/80 text-sm md:text-base leading-relaxed mb-10 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
           >
-            CloudsCanopy designs and develops modern websites, intelligent software, AI-powered
-            applications, and digital experiences that help businesses scale with confidence.
+            Growth shouldn't be limited by administrative friction or unscalable systems. We build high-performance backend tools, web platforms, and automated workflows designed to accelerate your operations.
           </motion.p>
 
           {/* CTA Buttons */}

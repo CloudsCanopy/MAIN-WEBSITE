@@ -1,49 +1,49 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Search, Figma, Code2, CheckCircle, Rocket, HeartHandshake } from 'lucide-react'
+import { Search, Figma, Code2, CheckCircle, Rocket, RefreshCw } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const steps = [
   {
     icon: Search,
-    label: 'Discover',
-    description: 'Understanding your business goals and requirements.',
+    label: 'System Discovery',
+    description: 'Mapping operational bottlenecks, user stories, and system architecture blueprints.',
     color: 'from-accent/70 to-accent',
     glow: 'rgba(107,143,113,0.25)',
   },
   {
     icon: Figma,
-    label: 'Design',
-    description: 'Creating intuitive user experiences and modern interfaces.',
+    label: 'Architectural Specs',
+    description: 'Designing modular database schemas, API specs, and clean visual layouts.',
     color: 'from-accent to-accent-secondary',
     glow: 'rgba(159,179,166,0.3)',
   },
   {
     icon: Code2,
-    label: 'Develop',
-    description: 'Building scalable, secure, and maintainable software.',
+    label: 'Test-Driven Code',
+    description: 'Writing modular code covered by strict unit, regression, and integration test suites.',
     color: 'from-accent-secondary to-accent',
     glow: 'rgba(107,143,113,0.3)',
   },
   {
     icon: CheckCircle,
-    label: 'Test',
-    description: 'Ensuring quality, security, and performance.',
+    label: 'Automated CI/CD Checks',
+    description: 'Running automated linting, security vulnerability checks, and test runner runs.',
     color: 'from-accent/80 to-accent-secondary/60',
     glow: 'rgba(107,143,113,0.2)',
   },
   {
     icon: Rocket,
-    label: 'Launch',
-    description: 'Deploying your product with confidence.',
+    label: 'Zero-Downtime Release',
+    description: 'Deploying production builds onto high-availability, auto-scaling cloud servers.',
     color: 'from-accent-secondary/90 to-accent/90',
     glow: 'rgba(159,179,166,0.25)',
   },
   {
-    icon: HeartHandshake,
-    label: 'Support',
-    description: 'Continuous improvements and technical assistance.',
+    icon: RefreshCw,
+    label: 'Iterative Handoffs',
+    description: 'Reviewing real telemetry stats, optimizing speed bottlenecks, and shipping sprint improvements.',
     color: 'from-accent to-accent-secondary',
     glow: 'rgba(107,143,113,0.3)',
   },
@@ -122,13 +122,14 @@ export default function Process() {
           {/* Ambient Hover Glow */}
           <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           <span className="relative z-10 inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
-            How We Work
+            Engineering Process
           </span>
           <h2 className="relative z-10 font-heading font-medium text-section text-white tracking-tight mb-4">
-            Our <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Development Process</span>
+            From Architectural Blueprint to{' '}
+            <span className="font-serif italic font-normal text-accent brightness-125 drop-shadow-[0_0_15px_rgba(107,143,113,0.4)]">Scalable Deployment</span>
           </h2>
           <p className="relative z-10 text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            A transparent, structured approach that keeps you informed at every stage.
+            We follow a rigorous, test-driven methodology to guarantee stability, speed, and clean code handoffs.
           </p>
         </motion.div>
 

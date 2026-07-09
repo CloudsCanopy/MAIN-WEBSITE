@@ -21,16 +21,16 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Trust />
         <About />
         <Services />
         <FeaturedSolutions />
-        <WhyChooseUs />
+        <Industries />
         <Process />
         <Technologies />
-        <Industries />
         <FerrariShowcase />
         <Testimonial />
+        <WhyChooseUs />
+        <Trust />
         <FAQ />
         <FinalCTA />
         <Contact />

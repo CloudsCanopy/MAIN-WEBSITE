@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion'
 
 const industries = [
+  'Hospitality',
   'Healthcare',
   'Education',
-  'Restaurants',
-  'Gyms',
-  'Hotels',
   'Retail',
-  'Real Estate',
+  'Manufacturing',
+  'Professional Services',
   'Startups',
-  'Small & Medium Businesses',
 ]
 
 export default function Industries() {

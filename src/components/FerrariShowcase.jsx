@@ -72,7 +72,7 @@ export default function FerrariShowcase() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-xs font-semibold uppercase tracking-[0.2em] text-red-500 mb-6 w-fit"
             >
               <Sparkles size={12} className="animate-pulse text-red-400" />
-              Featured Concept Case Study
+              Engineering Showcase
             </motion.div>
 
             <motion.h2
@@ -80,9 +80,9 @@ export default function FerrariShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-medium text-section text-text-primary tracking-tight mb-6"
+              className="font-heading font-medium text-section text-white tracking-tight mb-6"
             >
-              Ferrari <span className="font-serif italic font-normal text-red-500">Redesign</span> Concept
+              Ferrari Digital Platform <span className="font-serif italic font-normal text-red-500">Re-Engineering</span>
             </motion.h2>
 
             <motion.p
