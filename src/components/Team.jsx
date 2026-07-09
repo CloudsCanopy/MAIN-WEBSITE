@@ -46,7 +46,7 @@ const nonTechTeam = [
     role: '',
     photo: '/team/lalit.jpg',
     initials: 'LM',
-    social: { linkedin: 'https://www.linkedin.com/in/lalit-mishra-4b239441a/', instagram: 'https://www.instagram.com/_lalit.mishra_/' },
+    social: { instagram: 'https://www.instagram.com/_lalit.mishra_/' },
   },
   {
     name: 'S ARYAN',

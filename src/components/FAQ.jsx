@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, Minus } from 'lucide-react'
+import { Plus, Minus, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const faqs = [
   {
@@ -110,6 +111,16 @@ export default function FAQ() {
           <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
             Frequently Asked <span className="font-serif italic font-normal text-accent-secondary">Questions</span>
           </h2>
+          <div className="mt-6">
+            <Link
+              to="/team"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/8 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-accent hover:text-text-primary hover:bg-accent/15 hover:border-accent/40 shadow-glow-green/5 transition-all duration-300 cursor-pointer"
+            >
+              <span>WANNA MEET THE TEAM?</span>
+              <ArrowRight size={14} className="animate-pulse" />
+            </Link>
+          </div>
         </motion.div>
 
         <div className="flex flex-col gap-3">
