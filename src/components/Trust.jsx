@@ -38,27 +38,34 @@ export default function Trust() {
           </div>
         </motion.div>
 
-        {/* Placeholder client logo row */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
-          className="flex flex-wrap items-center justify-center gap-6"
-          aria-label="Client logos — coming soon"
-        >
-          {placeholderLogos.map((i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              className="h-10 w-28 rounded-lg bg-surface border border-white/8 opacity-40"
-              aria-hidden="true"
-            />
-          ))}
-        </motion.div>
-        <p className="text-center text-text-muted text-xs mt-6">
-          Client logos coming soon
-        </p>
+        {/* Cohesive Translucent Container for Client Logos */}
+        <div className="max-w-4xl mx-auto mt-12 p-8 sm:p-10 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative overflow-hidden text-center">
+          <h3 className="text-text-muted text-xs font-mono uppercase tracking-[0.25em] mb-8">
+            [ Client Partners — Coming Soon ]
+          </h3>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+            className="flex flex-wrap items-center justify-center gap-6 md:gap-8"
+            aria-label="Client logos — coming soon"
+          >
+            {placeholderLogos.map((i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className="h-12 w-32 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center opacity-30 hover:opacity-50 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 relative overflow-hidden"
+                aria-hidden="true"
+              >
+                {/* Subtle digital crosshair lines for structural blueprint design */}
+                <div className="w-3 h-[1px] bg-white/20 absolute" />
+                <div className="h-3 w-[1px] bg-white/20 absolute" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )
