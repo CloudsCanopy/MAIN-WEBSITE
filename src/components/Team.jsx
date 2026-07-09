@@ -5,28 +5,28 @@ import { Linkedin, Instagram, Github, ArrowUpRight } from 'lucide-react'
 const techTeam = [
   {
     name: 'ADITYA KUMAR SAHOO',
-    role: 'Founder & Chief Executive Officer',
+    role: '',
     photo: '/team/aditya.jpg',
     initials: 'AS',
     social: { linkedin: 'https://www.linkedin.com/in/aditya-kumar-sahoo03/', instagram: 'https://www.instagram.com/adi.tya_.03/', github: 'https://github.com/aditya030706' },
   },
   {
     name: 'ARYAN CHOUHAN',
-    role: 'Core Leadership & Strategy',
+    role: '',
     photo: '/team/aryan.jpg',
     initials: 'AC',
     social: { linkedin: 'https://www.linkedin.com/in/aryan-chouhan-b67799324/', instagram: 'https://www.instagram.com/aryanchouhan001/', github: 'https://github.com/aryanchouhan22' },
   },
   {
     name: 'BHARGODEB PANIGRAHI',
-    role: 'Core Engineering & Systems',
+    role: '',
     photo: '/team/bhargodeb.jpg',
     initials: 'BP',
     social: { linkedin: 'https://www.linkedin.com/in/bhargodeb-panigrahi-6b36a2323/', instagram: 'https://www.instagram.com/mr______panigrahi/', github: 'https://github.com/panigrahibhargodeb65-cloud' },
   },
   {
     name: 'SEETANSU SATYA PRAJNA',
-    role: 'Core Architecture & AI',
+    role: '',
     photo: '/team/seetansu.jpg',
     initials: 'SP',
     social: { linkedin: 'https://www.linkedin.com/in/seetansusatya/', instagram: 'https://www.instagram.com/nexus5654/', github: 'https://github.com/Nexus5308' },
@@ -35,15 +35,22 @@ const techTeam = [
 
 const nonTechTeam = [
   {
+    name: 'RAHUL PANI',
+    role: '',
+    photo: '/team/rahul.jpg',
+    initials: 'RP',
+    social: { instagram: 'https://www.instagram.com/' },
+  },
+  {
     name: 'LALIT MISHRA',
-    role: 'Core Design & Product Studio',
+    role: '',
     photo: '/team/lalit.jpg',
     initials: 'LM',
     social: { linkedin: 'https://www.linkedin.com/in/lalit-mishra-4b239441a/', instagram: 'https://www.instagram.com/_lalit.mishra_/' },
   },
   {
     name: 'S ARYAN',
-    role: 'Core Innovation & Operations',
+    role: '',
     photo: '/team/s-aryan.jpg',
     initials: 'SA',
     social: { instagram: 'https://www.instagram.com/mostly.aryaan/' },
@@ -145,27 +152,39 @@ export default function Team() {
               </span>
             </div>
             <div className="flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
-              <a
-                href={member.social.linkedin}
-                className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
-                aria-label={`${member.name} LinkedIn`}
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href={member.social.instagram}
-                className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
-                aria-label={`${member.name} Instagram`}
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href={member.social.github}
-                className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
-                aria-label={`${member.name} GitHub`}
-              >
-                <Github size={18} />
-              </a>
+              {member.social.linkedin && (
+                <a
+                  href={member.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
+                  aria-label={`${member.name} LinkedIn`}
+                >
+                  <Linkedin size={18} />
+                </a>
+              )}
+              {member.social.instagram && (
+                <a
+                  href={member.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
+                  aria-label={`${member.name} Instagram`}
+                >
+                  <Instagram size={18} />
+                </a>
+              )}
+              {member.social.github && (
+                <a
+                  href={member.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-accent hover:bg-accent/15 hover:shadow-glow-green transition-all duration-200"
+                  aria-label={`${member.name} GitHub`}
+                >
+                  <Github size={18} />
+                </a>
+              )}
             </div>
           </div>
         </div>
