@@ -7,6 +7,7 @@ import {
   Palette,
   TrendingUp,
   ArrowUpRight,
+  Video,
 } from 'lucide-react'
 
 const services = [
@@ -57,6 +58,14 @@ const services = [
     description:
       'SEO, Google Business Profile optimization, paid advertising, and digital growth strategies.',
     capabilities: ['Performance Marketing', 'SEO Content Strategy', 'Funnel Optimization', 'Growth Analytics'],
+  },
+  {
+    index: '07',
+    icon: Video,
+    title: 'Videography & Motion',
+    description:
+      'Cinematic videos, advertisements, brand shoots, and premium motion design to tell your story.',
+    capabilities: ['Video Production', 'Commercial Ads', 'Motion Graphics', 'Post-Production Editing'],
   },
 ]
 
