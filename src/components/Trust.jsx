@@ -23,15 +23,19 @@ export default function Trust() {
           variants={fadeUp}
           className="text-center mb-14"
         >
-          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
+          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-8">
             Trusted Technology{' '}
             <span className="font-serif italic font-normal text-accent-secondary">Partner</span>{' '}
             for Modern Businesses
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-            We collaborate with startups, growing businesses, and organizations to transform
-            ideas into secure, scalable, and user-focused digital products.
-          </p>
+          <div className="max-w-2xl mx-auto px-6 py-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
+            {/* Soft accent gradient glow inside box on hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <p className="text-text-secondary text-base sm:text-lg leading-relaxed relative z-10">
+              We collaborate with startups, growing businesses, and organizations to transform
+              ideas into secure, scalable, and user-focused digital products.
+            </p>
+          </div>
         </motion.div>
 
         {/* Placeholder client logo row */}
