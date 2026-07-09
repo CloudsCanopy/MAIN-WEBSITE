@@ -102,7 +102,7 @@
 }
 
 .intro-logo-text {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "General Sans", sans-serif;
   font-size: clamp(40px, 6vw, 68px);
   font-weight: 700;
   letter-spacing: -0.02em;

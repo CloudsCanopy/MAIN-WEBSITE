@@ -111,9 +111,9 @@ export default function Hero() {
             style={{ color: '#FFFFFF' }}
           >
             Engineering{' '}
-            <span className="text-accent-secondary font-semibold">Digital Solutions</span>{' '}
+            <span className="font-serif italic font-normal text-accent-secondary">Digital Solutions</span>{' '}
             That Move Businesses{' '}
-            <span className="text-accent font-semibold">Forward.</span>
+            <span className="font-serif italic font-normal text-accent">Forward.</span>
           </motion.h1>
 
           {/* Subheading */}

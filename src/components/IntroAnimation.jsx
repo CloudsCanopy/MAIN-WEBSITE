@@ -124,7 +124,7 @@ export default function IntroAnimation({ onComplete }) {
               >
                 <h1
                   className="font-heading font-black text-7xl sm:text-9xl md:text-[10rem] lg:text-[12rem] tracking-tighter text-black drop-shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
-                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: "#000000" }}
+                  style={{ fontFamily: '"General Sans", sans-serif', color: "#000000" }}
                 >
                   HII<span className="text-[#3b5d43] animate-pulse">.</span>
                 </h1>
@@ -141,7 +141,7 @@ export default function IntroAnimation({ onComplete }) {
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center justify-center gap-5 relative z-10 px-6 text-center"
               >
-                <h1 className="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase drop-shadow-[0_0_35px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+                <h1 className="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase drop-shadow-[0_0_35px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"General Sans", sans-serif' }}>
                   WE ARE THE <span className="shimmer-text">TEAM</span>
                 </h1>
                 <div className="w-28 h-1 bg-accent rounded-full animate-pulse shadow-[0_0_15px_#6B8F71]" />
@@ -203,7 +203,7 @@ export default function IntroAnimation({ onComplete }) {
                   className="flex items-center justify-center relative z-10"
                 >
                   <div className="absolute inset-0 bg-accent/35 blur-3xl rounded-full animate-ping pointer-events-none" />
-                  <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+                  <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"General Sans", sans-serif' }}>
                     LET'S GO!
                   </h1>
                 </motion.div>

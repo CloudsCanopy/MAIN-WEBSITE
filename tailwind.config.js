@@ -18,9 +18,9 @@ export default {
         'text-muted': '#5F7365',
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        heading: ['"General Sans"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'serif'],
+        serif: ['Fraunces', 'serif'],
       },
       fontSize: {
         'hero': 'clamp(2.75rem, 6vw, 5.5rem)',
