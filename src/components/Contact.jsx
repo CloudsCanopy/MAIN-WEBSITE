@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Send, CheckCircle, Mail, Phone, MessageCircle, Instagram, Linkedin, Github } from 'lucide-react'
+import { Send, CheckCircle, Mail, Phone, MessageCircle, Instagram, Linkedin } from 'lucide-react'
 import siteConfig from '../config/siteConfig'
 
 const inputClass =
@@ -47,7 +47,6 @@ export default function Contact() {
     { icon: MessageCircle, label: 'WhatsApp', href: `https://wa.me/91${siteConfig.contact.whatsapp}`, value: `+91 ${siteConfig.contact.whatsapp}` },
     { icon: Instagram, label: 'Instagram', href: siteConfig.social.instagram, value: 'Instagram' },
     { icon: Linkedin, label: 'LinkedIn', href: siteConfig.social.linkedin, value: 'LinkedIn' },
-    { icon: Github, label: 'GitHub', href: siteConfig.social.github, value: 'GitHub' },
   ]
 
   return (

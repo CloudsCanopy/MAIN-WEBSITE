@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, MessageCircle, Instagram, Linkedin, Github } from 'lucide-react'
+import { Mail, Phone, MessageCircle, Instagram, Linkedin } from 'lucide-react'
 import siteConfig from '../config/siteConfig'
 
 const footerLinks = {
@@ -26,7 +26,6 @@ const socialIcons = [
   { icon: Phone, label: 'Phone', href: `tel:${siteConfig.contact.phone}` },
   { icon: MessageCircle, label: 'WhatsApp', href: `https://wa.me/91${siteConfig.contact.whatsapp}` },
   { icon: Linkedin, label: 'LinkedIn', href: siteConfig.social.linkedin },
-  { icon: Github, label: 'GitHub', href: siteConfig.social.github },
   { icon: Instagram, label: 'Instagram', href: siteConfig.social.instagram },
 ]
 
@@ -155,16 +154,6 @@ export default function Footer() {
                   className="text-text-muted text-sm hover:text-text-primary transition-colors duration-200"
                 >
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href={siteConfig.social.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-muted text-sm hover:text-text-primary transition-colors duration-200"
-                >
-                  GitHub
                 </a>
               </li>
               <li>

@@ -16,7 +16,6 @@ const siteConfig = {
   social: {
     instagram: rawConfig.social.instagram,
     linkedin: rawConfig.social.linkedin,
-    github: rawConfig.social.github,
   },
 }
 

@@ -43,15 +43,15 @@ const nonTechTeam = [
     role: '',
     photo: '/team/rahul.jpg',
     initials: 'RP',
-    email: 'rahulpani.demo@gmail.com',
-    social: { instagram: 'https://www.instagram.com/' },
+    email: 'panirahul42@gmail.com',
+    social: { instagram: 'https://www.instagram.com/mr_harley48__/' },
   },
   {
     name: 'LALIT MISHRA',
     role: '',
     photo: '/team/lalit.jpg',
     initials: 'LM',
-    email: 'lalitmishra.demo@gmail.com',
+    email: 'lalit.mishra.rpd05@gmail.com',
     social: { instagram: 'https://www.instagram.com/_lalit.mishra_/' },
   },
   {
@@ -158,7 +158,7 @@ export default function Team() {
                 CloudsCanopy STUDIO
               </span>
             </div>
-             <div className="flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
               {member.email && (
                 <a
                   href={`mailto:${member.email}`}
