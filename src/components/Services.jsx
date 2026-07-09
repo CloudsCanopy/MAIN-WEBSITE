@@ -143,7 +143,7 @@ export default function Services() {
                         {service.capabilities.map((cap) => (
                           <span
                             key={cap}
-                            className="text-[10px] font-bold font-mono uppercase tracking-[0.12em] px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white/60 transition-all duration-300 group-hover:border-accent/30 group-hover:bg-accent/10 group-hover:text-accent"
+                            className="text-[10px] font-extrabold font-mono uppercase tracking-[0.12em] px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white transition-all duration-300 group-hover:border-accent/30 group-hover:bg-accent/10 group-hover:text-accent"
                           >
                             {cap}
                           </span>
