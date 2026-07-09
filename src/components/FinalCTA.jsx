@@ -35,10 +35,14 @@ export default function FinalCTA() {
             Let&rsquo;s Build Something{' '}
             <span className="gradient-text">Exceptional Together.</span>
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            Whether you&rsquo;re launching a startup, modernizing your business, or creating the
-            next digital product, CloudScanopy is ready to help turn your vision into reality.
-          </p>
+          <div className="max-w-2xl mx-auto px-6 py-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden mb-10 text-center transition-all duration-350 hover:border-white/10 hover:shadow-black/40">
+            {/* Soft accent gradient glow inside box on hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-accent-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <p className="text-text-secondary text-base sm:text-lg leading-relaxed relative z-10">
+              Whether you&rsquo;re launching a startup, modernizing your business, or creating the
+              next digital product, CloudScanopy is ready to help turn your vision into reality.
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <MagneticButton range={40}>
