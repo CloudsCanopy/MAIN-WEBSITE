@@ -25,7 +25,7 @@ export default function FinalCTA() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-6">
+          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-6">
             Let&rsquo;s Work Together
           </span>
           <h2

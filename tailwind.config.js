@@ -18,9 +18,9 @@ export default {
         'text-muted': '#5F7365',
       },
       fontFamily: {
-        heading: ['Sora', 'Space Grotesk', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
-        serif: ['Cormorant Garamond', 'serif'],
+        serif: ['"Instrument Serif"', 'serif'],
       },
       fontSize: {
         'hero': 'clamp(2.75rem, 6vw, 5.5rem)',

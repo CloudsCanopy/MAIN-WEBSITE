@@ -5,28 +5,23 @@ import "./IntroAnimation.css";
 // Blockbuster Cinematic Typographic Trailer Sequence
 // Sequence:
 // 0. "HII." on Pure White Screen (~1.2s)
-// 1. "WE." on Pure Black Screen (~1.1s)
-// 2. "ARE THE TEAM" (~1.3s)
-// 3. CloudsCanopy Logo & Brand Reveal (~2.4s)
-// 4. "READY TO SERVE YOU" (~1.4s)
-// 5. "LET'S GO!" (~1.2s)
-// 6. Heartwarming Question dead center (~4.5s)
-// 7. Smooth transition to the homepage
+// 1. "WE ARE THE TEAM" (~1.6s)
+// 2. CloudsCanopy Logo & Brand Reveal (~2.4s)
+// 3. "LET'S GO!" (~2.2s)
+// 4. Smooth transition to the homepage
 
 export default function IntroAnimation({ onComplete }) {
-  const [stage, setStage] = useState("hii"); // "hii" -> "we" -> "team" -> "logo" -> "ready" -> "letsgo" -> "quote" -> "done"
+  const [stage, setStage] = useState("hii"); // "hii" -> "team" -> "logo" -> "letsgo" -> "done"
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setStage("we"), 1200),
-      setTimeout(() => setStage("team"), 2300),
-      setTimeout(() => setStage("logo"), 3600),
-      setTimeout(() => setStage("ready"), 6000),
-      setTimeout(() => setStage("letsgo"), 7400),
+      setTimeout(() => setStage("team"), 1200),
+      setTimeout(() => setStage("logo"), 2800),
+      setTimeout(() => setStage("letsgo"), 5200),
       setTimeout(() => {
         setStage("done");
         onComplete?.();
-      }, 9600),
+      }, 7400),
     ];
 
     return () => timers.forEach((t) => clearTimeout(t));
@@ -98,6 +93,22 @@ export default function IntroAnimation({ onComplete }) {
           </motion.div>
         )}
 
+        {/* Skip Button */}
+        {stage !== "done" && stage !== "hii" && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            whileHover={{ opacity: 1, scale: 1.05 }}
+            onClick={() => {
+              setStage("done");
+              onComplete?.();
+            }}
+            className="absolute top-8 right-8 z-30 px-4 py-2 rounded-full border border-white/10 bg-black/40 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-text-primary backdrop-blur-md cursor-pointer transition-all duration-200"
+          >
+            Skip Intro ➔
+          </motion.button>
+        )}
+
         {/* Center Screen Content */}
         <div className="intro-content">
           <AnimatePresence mode="wait">
@@ -105,55 +116,39 @@ export default function IntroAnimation({ onComplete }) {
             {stage === "hii" && (
               <motion.div
                 key="hii-stage"
-                initial={{ opacity: 0, scale: 0.8, filter: "blur(15px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.15, filter: "blur(10px)" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ opacity: 0, scale: 0.85, letterSpacing: "-0.05em", filter: "blur(12px)" }}
+                animate={{ opacity: 1, scale: 1, letterSpacing: "-0.02em", filter: "blur(0px)" }}
+                exit={{ opacity: 0, scale: 1.1, letterSpacing: "0.05em", filter: "blur(10px)" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="flex items-center justify-center relative z-20"
               >
                 <h1
                   className="font-heading font-black text-7xl sm:text-9xl md:text-[10rem] lg:text-[12rem] tracking-tighter text-black drop-shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
-                  style={{ fontFamily: '"Sora", sans-serif', color: "#000000" }}
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: "#000000" }}
                 >
                   HII<span className="text-[#3b5d43] animate-pulse">.</span>
                 </h1>
               </motion.div>
             )}
 
-            {/* Stage 1: WE. */}
-            {stage === "we" && (
-              <motion.div
-                key="we-stage"
-                initial={{ opacity: 0, scale: 0.8, filter: "blur(15px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.15, filter: "blur(10px)" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center justify-center relative z-10"
-              >
-                <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]" style={{ fontFamily: '"Sora", sans-serif' }}>
-                  WE<span className="text-accent animate-pulse">.</span>
-                </h1>
-              </motion.div>
-            )}
-
-            {/* Stage 2: ARE THE TEAM */}
+            {/* Stage 1: WE ARE THE TEAM */}
             {stage === "team" && (
               <motion.div
                 key="team-stage"
-                initial={{ opacity: 0, scale: 0.85, filter: "blur(15px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.15, filter: "blur(10px)" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.15em", filter: "blur(15px)" }}
+                animate={{ opacity: 1, scale: 1, letterSpacing: "0.02em", filter: "blur(0px)" }}
+                exit={{ opacity: 0, scale: 1.1, letterSpacing: "-0.02em", filter: "blur(10px)" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col items-center justify-center gap-5 relative z-10 px-6 text-center"
               >
-                <h1 className="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase drop-shadow-[0_0_35px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"Sora", sans-serif' }}>
-                  ARE THE <span className="shimmer-text">TEAM</span>
+                <h1 className="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase drop-shadow-[0_0_35px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+                  WE ARE THE <span className="shimmer-text">TEAM</span>
                 </h1>
                 <div className="w-28 h-1 bg-accent rounded-full animate-pulse shadow-[0_0_15px_#6B8F71]" />
               </motion.div>
             )}
 
-            {/* Stage 3: LOGO REVEAL */}
+            {/* Stage 2: LOGO REVEAL */}
             {stage === "logo" && (
               <motion.div
                 key="logo-stage"
@@ -186,26 +181,7 @@ export default function IntroAnimation({ onComplete }) {
               </motion.div>
             )}
 
-            {/* Stage 4: READY TO SERVE YOU */}
-            {stage === "ready" && (
-              <motion.div
-                key="ready-stage"
-                initial={{ opacity: 0, scale: 0.85, filter: "blur(15px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.15, filter: "blur(10px)" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center justify-center text-center px-6 relative z-10"
-              >
-                <h1 className="font-heading font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white uppercase mb-4 drop-shadow-[0_4px_25px_rgba(0,0,0,0.9)]" style={{ fontFamily: '"Sora", sans-serif' }}>
-                  READY TO <span className="text-accent drop-shadow-[0_0_30px_rgba(107,143,113,0.8)]">SERVE YOU</span>
-                </h1>
-                <p className="text-text-secondary text-xs sm:text-sm font-mono uppercase tracking-[0.3em]">
-                  [ Engineering Next-Gen Digital Products ]
-                </p>
-              </motion.div>
-            )}
-
-            {/* Stage 5: LET'S GO! */}
+            {/* Stage 3: LET'S GO! */}
             {stage === "letsgo" && (
               <div key="letsgo-container" className="relative w-full h-full flex items-center justify-center">
                 {/* White Flash Effect Layer */}
@@ -227,7 +203,7 @@ export default function IntroAnimation({ onComplete }) {
                   className="flex items-center justify-center relative z-10"
                 >
                   <div className="absolute inset-0 bg-accent/35 blur-3xl rounded-full animate-ping pointer-events-none" />
-                  <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"Sora", sans-serif' }}>
+                  <h1 className="font-heading font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter shimmer-text drop-shadow-[0_0_50px_rgba(107,143,113,0.9)]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     LET'S GO!
                   </h1>
                 </motion.div>

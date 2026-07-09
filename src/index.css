@@ -46,6 +46,11 @@
 }
 
 @layer utilities {
+  .moon-text-blend {
+    mix-blend-mode: screen;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9), 0 2px 20px rgba(0, 0, 0, 0.9);
+  }
+
   .gradient-text {
     background: linear-gradient(135deg, #6B8F71, #9FB3A6);
     -webkit-background-clip: text;

@@ -119,13 +119,13 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-24"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
             How We Work
           </span>
-          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4">
+          <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-4 moon-text-blend">
             Our <span className="font-serif italic font-normal text-accent-secondary">Development Process</span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-xl mx-auto">
+          <p className="text-text-secondary text-lg max-w-xl mx-auto moon-text-blend">
             A transparent, structured approach that keeps you informed at every stage.
           </p>
         </motion.div>
@@ -166,10 +166,10 @@ export default function Process() {
                       <span className="text-xs font-bold gradient-text">{index + 1}</span>
                     </div>
                   </div>
-                  <h3 className="font-heading font-semibold text-text-primary text-base mb-2">
+                  <h3 className="font-heading font-semibold text-text-primary text-base mb-2 moon-text-blend">
                     {step.label}
                   </h3>
-                  <p className="text-white text-xs leading-relaxed max-w-[140px] font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+                  <p className="text-white text-xs leading-relaxed max-w-[140px] font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)] moon-text-blend">
                     {step.description}
                   </p>
                 </div>

@@ -84,14 +84,14 @@ export default function Services() {
           
           {/* Left Column — Section Header */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:h-fit">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+            <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
               What We Do
             </span>
-            <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-6">
+            <h2 className="font-heading font-medium text-section text-text-primary tracking-tight mb-6 moon-text-blend">
               Solutions We <span className="font-serif italic font-normal text-accent-secondary">Build</span>
             </h2>
             <p 
-              className="text-white text-base leading-relaxed font-semibold mb-8 max-w-sm drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
+              className="text-white text-base leading-relaxed font-semibold mb-8 max-w-sm drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
               style={{ color: '#FFFFFF' }}
             >
               From initial concept to deployment — every digital solution is engineered for longevity, security, and real business impact.
@@ -118,12 +118,12 @@ export default function Services() {
                 >
                   {/* Left part of row: Index + Title */}
                   <div className="flex items-start gap-6 md:w-1/2">
-                    <span className="font-serif italic text-2xl md:text-3xl text-text-muted select-none group-hover:text-accent transition-colors duration-300">
+                    <span className="font-serif italic text-2xl md:text-3xl text-text-muted select-none group-hover:text-accent transition-colors duration-300 moon-text-blend">
                       {service.index}
                     </span>
                     <div>
                       <h3 
-                        className="font-heading font-semibold text-lg md:text-xl text-white group-hover:text-accent transition-colors duration-200 flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
+                        className="font-heading font-semibold text-lg md:text-xl text-white group-hover:text-accent transition-colors duration-200 flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
                         style={{ color: '#FFFFFF' }}
                       >
                         {service.title}
@@ -132,7 +132,7 @@ export default function Services() {
                       {/* Sub-capabilities list */}
                       <div className="flex flex-wrap gap-x-3 gap-y-1.5 mt-3">
                         {service.capabilities.map((cap) => (
-                          <span key={cap} className="text-[10px] uppercase tracking-wider font-mono text-[#9FB3A6] bg-[#6B8F71]/10 px-2 py-0.5 rounded border border-[#6B8F71]/20">
+                          <span key={cap} className="text-[10px] uppercase tracking-wider font-mono text-[#9FB3A6] bg-[#6B8F71]/10 px-2 py-0.5 rounded border border-[#6B8F71]/20 moon-text-blend">
                             {cap}
                           </span>
                         ))}
@@ -146,7 +146,7 @@ export default function Services() {
                       <Icon size={20} />
                     </div>
                     <p 
-                      className="text-white text-sm md:text-base leading-relaxed font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
+                      className="text-white text-sm md:text-base leading-relaxed font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
                       style={{ color: '#FFFFFF' }}
                     >
                       {service.description}

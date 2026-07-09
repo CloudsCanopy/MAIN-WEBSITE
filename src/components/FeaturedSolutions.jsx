@@ -35,7 +35,7 @@ export default function FeaturedSolutions() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <span className="text-xs font-semibold uppercase tracking-widest text-text-muted">
+          <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
             Solution Types We Deliver
           </span>
         </motion.div>

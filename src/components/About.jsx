@@ -23,7 +23,7 @@ export default function About() {
             viewport={{ once: true, margin: '-80px' }}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+            <span className="inline-block px-3.5 py-1.5 text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-accent rounded-full bg-black/60 border border-accent/30 backdrop-blur-md shadow-[0_0_15px_rgba(107,143,113,0.1)] mb-4">
               About Us
             </span>
             <h2 className="font-heading font-medium text-section text-text-primary tracking-tight leading-tight mb-0">

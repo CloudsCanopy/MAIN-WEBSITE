@@ -24,7 +24,7 @@ export default function Moon() {
             backgroundImage: `url(${moonImg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'contrast(1.2) brightness(0.95)',
+            filter: 'contrast(1.25) brightness(0.6)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 56%, transparent 65%)',
             maskImage: 'radial-gradient(circle at center, black 56%, transparent 65%)',
           }}

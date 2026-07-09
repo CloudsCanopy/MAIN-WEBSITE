@@ -8,14 +8,25 @@ export default function FerrariShowcase() {
   const [coords, setCoords] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
-  // Track prefers-reduced-motion
+  // Track prefers-reduced-motion and screen size
   useEffect(() => {
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     setReducedMotion(motionQuery.matches)
     const handleQueryChange = () => setReducedMotion(motionQuery.matches)
     motionQuery.addEventListener('change', handleQueryChange)
-    return () => motionQuery.removeEventListener('change', handleQueryChange)
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => {
+      motionQuery.removeEventListener('change', handleQueryChange)
+      window.removeEventListener('resize', checkMobile)
+    }
   }, [])
 
   // Track mouse coordinates for spotlight glow and 3D tilt
@@ -132,8 +143,8 @@ export default function FerrariShowcase() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               style={{ 
-                y: reducedMotion ? 0 : yImage, 
-                rotateZ: reducedMotion ? 0 : rotateImage,
+                y: reducedMotion || isMobile ? 0 : yImage, 
+                rotateZ: reducedMotion || isMobile ? 0 : rotateImage,
                 perspective: 1500
               }}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -180,8 +191,8 @@ export default function FerrariShowcase() {
                 {/* 3D tilt container for image */}
                 <motion.div
                   style={{
-                    rotateY: !reducedMotion && isHovered ? (coords.x / (imageContainerRef.current?.clientWidth || 1) - 0.5) * 8 : 0,
-                    rotateX: !reducedMotion && isHovered ? -(coords.y / (imageContainerRef.current?.clientHeight || 1) - 0.5) * 8 : 0,
+                    rotateY: !reducedMotion && !isMobile && isHovered ? (coords.x / (imageContainerRef.current?.clientWidth || 1) - 0.5) * 8 : 0,
+                    rotateX: !reducedMotion && !isMobile && isHovered ? -(coords.y / (imageContainerRef.current?.clientHeight || 1) - 0.5) * 8 : 0,
                     transformStyle: 'preserve-3d',
                   }}
                   transition={{ type: 'spring', stiffness: 150, damping: 25 }}

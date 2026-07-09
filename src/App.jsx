@@ -12,7 +12,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
-  const [introSeen, setIntroSeen] = useState(false)
+  const [introSeen, setIntroSeen] = useState(() => {
+    return sessionStorage.getItem('introSeen') === 'true'
+  })
 
   useEffect(() => {
     // Detect prefers-reduced-motion
@@ -63,6 +65,7 @@ function App() {
   }, [introSeen])
 
   const handleIntroComplete = () => {
+    sessionStorage.setItem('introSeen', 'true')
     setIntroSeen(true)
     document.body.style.overflow = ''
   }

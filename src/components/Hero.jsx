@@ -107,7 +107,7 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-heading font-bold text-white leading-[1.15] tracking-tight mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
+            className="font-heading font-bold text-white leading-[1.15] tracking-tight mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
             style={{ color: '#FFFFFF' }}
           >
             Engineering{' '}
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-white text-sm md:text-base leading-relaxed mb-10 max-w-5xl font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,1)]"
+            className="text-white text-sm md:text-base leading-relaxed mb-10 max-w-5xl font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] moon-text-blend"
             style={{ color: '#FFFFFF' }}
           >
             CloudsCanopy designs and develops modern websites, intelligent software, AI-powered
