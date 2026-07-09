@@ -1,8 +1,8 @@
 import moonImg from './whatsapp-moon.jpeg'
 
-export default function Moon({ isAbsolute = false }) {
+export default function Moon() {
   return (
-    <div className={`${isAbsolute ? 'absolute' : 'fixed'} inset-y-0 right-0 w-full h-full overflow-hidden pointer-events-none select-none z-0`}>
+    <div className="fixed inset-y-0 right-0 w-full h-screen overflow-hidden pointer-events-none select-none z-0">
       
       {/* 1. Outer Soft Lunar Atmospheric Glow (Pure Silver/White) */}
       <div 

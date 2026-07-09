@@ -88,8 +88,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-grid opacity-20" />
       </div>
 
-      <Moon isAbsolute={true} />
-
       <div ref={contentRef} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-20 md:pt-44 md:pb-28 w-full">
         <div className="max-w-xl lg:max-w-2xl relative z-10">
           {/* Executive Pill Badge */}

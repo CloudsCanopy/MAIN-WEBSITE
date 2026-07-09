@@ -17,9 +17,6 @@ export default function FinalCTA() {
     >
       {/* Grid */}
       <div className="absolute inset-0 bg-grid opacity-25 pointer-events-none" aria-hidden="true" />
-      
-      {/* Signature Moon Graphic Localized */}
-      <Moon isAbsolute={true} />
 
       <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center z-10">
         <motion.div

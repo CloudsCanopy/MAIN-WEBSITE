@@ -119,33 +119,42 @@ export default function Services() {
                   </div>
 
                   {/* Middle/Right part: Problem -> What We Build -> Business Impact Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow md:w-[65%] text-left">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-grow md:w-[65%] text-left">
                     {/* Problem */}
-                    <div className="space-y-1.5">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-white/40">
-                        Problem
-                      </span>
-                      <p className="text-text-secondary text-xs leading-relaxed font-semibold">
+                    <div className="space-y-2 p-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-md hover:border-white/10 hover:bg-black/50 transition-all duration-300 shadow-xl relative group/card">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-red-400">
+                          Problem
+                        </span>
+                      </div>
+                      <p className="text-white/80 text-xs sm:text-[13px] leading-relaxed font-medium">
                         {service.problem}
                       </p>
                     </div>
 
                     {/* What We Build */}
-                    <div className="space-y-1.5">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-accent">
-                        What We Build
-                      </span>
-                      <p className="text-white text-xs leading-relaxed font-semibold">
+                    <div className="space-y-2 p-5 rounded-2xl bg-accent/[0.02] border border-accent/10 backdrop-blur-md hover:border-accent/30 hover:bg-accent/[0.04] transition-all duration-300 shadow-xl relative group/card">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#6B8F71]" />
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-accent">
+                          What We Build
+                        </span>
+                      </div>
+                      <p className="text-white text-xs sm:text-[13px] leading-relaxed font-semibold">
                         {service.whatWeBuild}
                       </p>
                     </div>
 
                     {/* Business Impact */}
-                    <div className="space-y-1.5">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-accent-secondary">
-                        Business Impact
-                      </span>
-                      <p className="text-text-secondary text-xs leading-relaxed font-semibold">
+                    <div className="space-y-2 p-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-md hover:border-white/10 hover:bg-black/50 transition-all duration-300 shadow-xl relative group/card">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary animate-pulse" />
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-[0.15em] text-accent-secondary">
+                          Business Impact
+                        </span>
+                      </div>
+                      <p className="text-white/80 text-xs sm:text-[13px] leading-relaxed font-medium">
                         {service.businessImpact}
                       </p>
                     </div>
