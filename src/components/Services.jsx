@@ -139,9 +139,12 @@ export default function Services() {
                         <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 text-accent-secondary" />
                       </h3>
                       {/* Sub-capabilities list */}
-                      <div className="flex flex-wrap gap-x-3 gap-y-1.5 mt-3">
+                      <div className="flex flex-wrap gap-x-2.5 gap-y-2 mt-4.5">
                         {service.capabilities.map((cap) => (
-                          <span key={cap} className="text-[10px] uppercase tracking-wider font-mono text-[#9FB3A6] bg-[#6B8F71]/10 px-2 py-0.5 rounded border border-[#6B8F71]/20 moon-text-blend">
+                          <span
+                            key={cap}
+                            className="text-[10px] font-bold font-mono uppercase tracking-[0.12em] px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white/60 transition-all duration-300 group-hover:border-accent/30 group-hover:bg-accent/10 group-hover:text-accent group-hover:shadow-[0_0_12px_rgba(107,143,113,0.1)]"
+                          >
                             {cap}
                           </span>
                         ))}
