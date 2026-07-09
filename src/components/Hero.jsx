@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Terminal, Sparkles, Compass } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MagneticButton from './MagneticButton'
@@ -162,25 +162,53 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-14 md:mt-18 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl"
+            className="mt-14 md:mt-18 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-2xl"
           >
             {[
-              { value: 'Web · Software', label: 'Products we build' },
-              { value: 'AI · E-Commerce', label: 'And more' },
-              { value: 'Product Studio', label: 'Digital experiences' },
-            ].map((item) => (
-              <div
-                key={item.value}
-                className="flex flex-col justify-center px-5 py-4 rounded-2xl bg-[#0a0f0b]/80 border border-white/10 hover:border-accent/40 transition-all duration-300 shadow-xl backdrop-blur-md group"
-              >
-                <span className="font-heading font-bold text-white text-sm group-hover:text-accent transition-colors">
-                  {item.value}
-                </span>
-                <span className="text-accent-secondary/70 text-[10px] font-mono uppercase tracking-widest mt-1 font-semibold">
-                  // {item.label}
-                </span>
-              </div>
-            ))}
+              { 
+                value: 'Web · Software', 
+                label: 'Products we build',
+                icon: Terminal,
+                accent: 'text-accent'
+              },
+              { 
+                value: 'AI · E-Commerce', 
+                label: 'And more',
+                icon: Sparkles,
+                accent: 'text-accent-secondary'
+              },
+              { 
+                value: 'Product Studio', 
+                label: 'Digital experiences',
+                icon: Compass,
+                accent: 'text-accent'
+              },
+            ].map((item) => {
+              const Icon = item.icon
+              return (
+                <div
+                  key={item.value}
+                  className="relative overflow-hidden flex items-start gap-4 px-5 py-4.5 rounded-2xl bg-black/40 border border-white/5 hover:border-accent/30 transition-all duration-350 shadow-2xl backdrop-blur-xl group hover:-translate-y-0.5"
+                >
+                  {/* Subtle hover background sweep gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Icon with sage green container */}
+                  <div className={`p-2.5 rounded-xl bg-white/5 border border-white/8 group-hover:border-accent/30 group-hover:bg-accent/10 transition-colors duration-300 ${item.accent}`}>
+                    <Icon size={16} className="transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+
+                  <div className="flex flex-col justify-center">
+                    <span className="font-heading font-bold text-white text-sm tracking-tight group-hover:text-accent transition-colors">
+                      {item.value}
+                    </span>
+                    <span className="text-text-muted text-[10px] font-mono uppercase tracking-[0.15em] mt-1 font-semibold">
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              )
+            })}
           </motion.div>
         </div>
       </div>
