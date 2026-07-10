@@ -121,7 +121,7 @@ export default function Hero() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-white/80 text-sm md:text-base leading-relaxed mb-10 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+            className="text-white text-sm md:text-base leading-relaxed mb-10 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
           >
             Growth shouldn't be limited by administrative friction or unscalable systems. We build high-performance backend tools, web platforms, and automated workflows designed to accelerate your operations.
           </motion.p>
