@@ -39,6 +39,14 @@ const techTeam = [
 
 const nonTechTeam = [
   {
+    name: 'S ARYAN',
+    role: '',
+    photo: '/team/s-aryan.jpg',
+    initials: 'SA',
+    email: 'sutararyan6@gmail.com',
+    social: { instagram: 'https://www.instagram.com/mostly.aryaan/' },
+  },
+  {
     name: 'RAHUL PANI',
     role: '',
     photo: '/team/rahul.jpg',
@@ -53,14 +61,6 @@ const nonTechTeam = [
     initials: 'LM',
     email: 'lalit.mishra.rpd05@gmail.com',
     social: { instagram: 'https://www.instagram.com/_lalit.mishra_/' },
-  },
-  {
-    name: 'S ARYAN',
-    role: '',
-    photo: '/team/s-aryan.jpg',
-    initials: 'SA',
-    email: 'saryan.demo@gmail.com',
-    social: { instagram: 'https://www.instagram.com/mostly.aryaan/' },
   },
 ]
 

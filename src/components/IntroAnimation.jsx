@@ -93,22 +93,6 @@ export default function IntroAnimation({ onComplete }) {
           </motion.div>
         )}
 
-        {/* Skip Button */}
-        {stage !== "done" && stage !== "hii" && (
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            onClick={() => {
-              setStage("done");
-              onComplete?.();
-            }}
-            className="absolute top-8 right-8 z-30 px-4 py-2 rounded-full border border-white/10 bg-black/40 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-text-primary backdrop-blur-md cursor-pointer transition-all duration-200"
-          >
-            Skip Intro ➔
-          </motion.button>
-        )}
-
         {/* Center Screen Content */}
         <div className="intro-content">
           <AnimatePresence mode="wait">
